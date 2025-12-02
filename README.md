@@ -5,7 +5,7 @@ Repository này chứa mã nguồn cho hệ thống kiểm thử hiệu năng gi
 
 Mục tiêu chính:
 - **Stress Test**: Gửi liên tục lượng lớn gói tin (lên đến 100000 gói) để kiểm tra độ ổn định.
-- **Analyzer**: Phía Server phân tích số lượng gói tin nhận được và phát hiện các gói tin bị mất dựa trên Sequence Number.
+- **Analyzer**: Phía nhận phân tích số lượng gói tin nhận được và phát hiện các gói tin bị mất dựa trên Sequence Number.
 - So sánh hiệu quả giữa các phương thức truyền tin (Write Without Response vs Notify).
 
 ## 2. Cấu trúc thư mục
@@ -13,12 +13,12 @@ Dự án được chia thành các thư mục dựa trên phương thức giao t
 
 ```
 ├── WNR/                  # Chế độ Write Without Response (Tối ưu tốc độ)
-│   ├── CLIENT/           # Code cho ESP32 đóng vai trò Client (Gửi dữ liệu)
-│   └── SERVER/           # Code cho ESP32 đóng vai trò Server (Nhận & Phân tích)
+│   ├── CLIENT/           # Code cho ESP32 đóng vai trò Client 
+│   └── SERVER/           # Code cho ESP32 đóng vai trò Server 
 │
 ├── Notify/               # Chế độ Notify (Sử dụng cơ chế thông báo)
-│   ├── CLIENT/           # Code cho ESP32 Client (Stress Test - Aggressive Drop)
-│   └── SERVER/           # Code cho ESP32 Server (Event Driven Log)
+│   ├── CLIENT/           # Code cho ESP32 Client 
+│   └── SERVER/           # Code cho ESP32 Server 
 ```
 
 ## 3. Yêu cầu phần cứng
